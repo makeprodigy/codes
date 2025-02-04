@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>till objects</title>
+</head>
+<body>
+  <!-- add to cart functionality-->
+  <button onclick="
+    console.log(`cartQuantity: ${cartQuantity}`);
+    ">Show Quantity</button>
+  
+  <button onclick="
+    cartQuantity += 1;
+    console.log(`Cart Quantity: ${cartQuantity}
+    `);
+  ">Add to Cart</button>
+
+  <button onclick="
+    cartQuantity += 2;
+    console.log(`Cart Quantity: ${cartQuantity}
+    `);
+  ">+2</button>
+  <button onclick="
+    cartQuantity += 3;
+    console.log(`Cart Quantity: ${cartQuantity}
+    `);
+  ">+3</button>
+  <button onclick="
+    cartQuantity = 0;
+    console.log('Cart was Reset')
+    console.log(`Cart Quantity: ${cartQuantity}
+    `);
+  ">Reset Cart</button>
+
+  <script>
+    let cartQuantity = 0;
+  </script>
+
+
+  <!--Rock Papers Scissors-->
+  <p>Rock Papers Scissors</p>
+  <button onclick="
+    playGame('rock');
+    ">Rock</button>
+  <button onclick="
+    playGame('papers');
+  ">Papers</button>
+  <button onclick="
+    playGame('scissors');
+  ">Scissors</button>
+
+  <button onclick="
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem('score');
+    alert(`Score was Reset
+      \nWins: ${score.wins} \nLosses: ${score.losses} \nTies: ${score.ties}`);
+  ">Reset Score</button>
+    <script>
+
+      const score = JSON.parse(localStorage.getItem('score')) || {
+          wins: 0,
+          losses: 0,
+          ties: 0
+        };
+
+      // if (score === null) {
+      //   score = {
+      //     wins: 0,
+      //     losses: 0,
+      //     ties: 0
+      //   };
+      // }
+
+
+      // const resultt = 0 ? 'truthy' : 'falsy';
+      // console.log(resultt);
+
+      // true && console.log('hello')
+      // const message = 5 && 'hellooooo';
+      // console.log(message);
+
+      function playGame(playerMove) {
+        const computerChoice = thecomputerChoice();
+        let result = '';
+        if (playerMove === 'scissors') {
+          if (computerChoice === 'rock') {
+            result = 'You Lose!';
+          } else if (computerChoice === 'papers') {
+            result = 'You Win!';
+          } else if (computerChoice === 'scissors') {
+            result = 'Tie!';
+          }
+           
+        } else if (playerMove === 'rock'){
+          if (computerChoice === 'rock') {
+            result = 'You Win!';
+          } else if (computerChoice === 'papers') {
+            result = 'Tie!';
+          } else if (computerChoice === 'scissors') {
+            result = 'You Lose!';
+          }
+
+        } else {
+          if (computerChoice === 'rock') {
+            result = 'Tie!';
+          } else if (computerChoice === 'papers') {
+            result = 'You Lose!';
+          } else if (computerChoice === 'scissors') {
+            result = 'You Win!';
+          }
+        }
+
+        if (result === 'You Win!') {
+          score.wins++;
+        } else if (result === 'You Lose!') {
+          score.losses++;
+        } else {
+          score.ties++;
+        }
+        localStorage.setItem('score', JSON.stringify(score));
+
+        alert(`Your Choice: ${playerMove} \n Computer Choice: ${computerChoice} \n ${result}
+        \n Wins: ${score.wins} \n Losses: ${score.losses} \n Ties: ${score.ties}`);
+      }
+     
+      function thecomputerChoice () {
+        let computerChoice = '';
+        const randomNumber = Math.random();
+        if (randomNumber >= 0 && randomNumber < 1/3) {
+          computerChoice = 'rock';
+
+        } else if (randomNumber >= 1/3 && randomNumber < 2/3) {
+          computerChoice = 'papers';
+
+        } else {
+          computerChoice = 'scissors';
+        }
+
+        return computerChoice;
+      }
+
+
+      const product = {
+        name: 'stone socks',
+        price: 1080
+      };
+      product.color = 'peach pink';
+      delete product.price;
+      console.log(product);
+
+
+      const product2 = {
+        name: 'shirt',
+        ['delivery-time'] : '1 day',
+        rating: {
+          stars: 4.5,
+          reviews: 1001
+        },
+        fun: function function1() {
+          console.log('Function inside an object');
+        } // when we save functions inside an object, we call them methods!
+   
+    // above object is in javascript format, which makes sense in js only, but we have JSON format too, which is more universal and can be used in other languages too! and that's why files are transferred in JSON format! json is a subset of js, so it's easy to convert js to json and vice versa! json doesn't support functions, json is more convenient but with a little less functionality!
+      
+      }
+      /* console.log(product2);
+      console.log(product2.name);
+      console.log(product2['name']) //bracket notation lets us use the property that normally don't work with dot notation
+      console.log(product2['delivery-time']);
+      console.log(product2.rating.stars);
+      product2.fun();
+      console.log(typeof console.log);
+      // log is an function stored inside the object called console!
+      // console (object) + log (function) and log function is now a method of console object!
+
+      JSON.stringify(product2); // to convert a js object to json format
+      console.log(JSON.stringify(product2));
+
+      const jsonString = JSON.stringify(product2)
+      console.log(JSON.parse(jsonString)); // to convert a json string to js object */
+    
+
+      console.log('hello'.length);
+      console.log('hello'.toUpperCase());
+
+      const object1 = {
+        message: 'hello',
+      };
+      console.log(object1.message);
+
+      const object2 = object1;
+      console.log(object2.message);
+
+      object1.message = 'awesomee';
+      console.log(object1.message);
+      console.log(object2.message);
+
+      const object3 = {
+        message: 'awesomee',
+      };
+
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+      const object4 = {
+        message: 'awesomee',
+        price: 9799
+      };
+
+      // const mes = object4.message;
+      // console.log(mes)
+      const { message,price } = object4;
+      console.log(message);
+      console.log(price)
+      
+      const object5 = {
+        // message: message,
+        message,
+        // method: function function1() {
+        //   console.log(method());
+        // }
+        method() {
+          console.log('method');
+        }
+      };
+      console.log(object5)
+      object5.method();
+    </script>
+
+</body>
+</html>

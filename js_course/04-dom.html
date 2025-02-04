@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+</head>
+<body>
+  <button>hello</button>
+  <button class="js-butt-un">Second button</button>
+  <!-- common practice is that when we are creating a class that is to be modified using javascript, we start the class name as 'js-...'-->
+  <script>
+
+  const buttonElement = document.querySelector('.js-butt-un');
+  console.log(buttonElement);
+    /*
+    console.log(document.title);
+    document.title = 'changed';
+
+    console.log(document.body);
+    console.log(typeof document.body);
+
+    console.log(document.body.innerHTML);
+    document.body.innerHTML = '<button>orewaaa</button>';
+    */
+
+    // console.log(document.querySelector('button').innerHTML);
+    // document.querySelector('button').innerHTML = 'changed through query selector '
+    /* document.body.innerHTML = 'helloooo'; //this will change the whole body to helloooo
+    document.title = 'i change the title'; //this will change the title to 'i change the title' */
+
+  </script>
+</body>
+</html>
