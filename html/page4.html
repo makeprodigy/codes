@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my first website</title>
+    <link rel="icon" type="image/jpeg" href="photo_2024-09-13 12.27.20.jpeg">
+
+    <!--This is an internal stylesheet-->
+    <style>
+        
+    </style>
+
+    <!--This is an external stylesheet-->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+    
+    <!--in the header tag 'inline' stylesheet is used-->
+    <header style="background-color: tomato;">
+        <h1>This is PAGE 4</h1>
+        <nav class="navbar">
+            <ul>
+                <li><a href="htmlwithCSS.html">HOME</a></li>
+                <li><a href="page2.html">About Us</a></li>
+                <li><a href="page3.html">Products</a></li>
+                <li><a href="page4.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <hr>
+    </header>
+
+    <main>
+
+    
+    <div class="pagination">
+        <a href="page3.html"><</a>
+        <a href="htmlwithCSS.html">1</a>
+        <a href="page2.html">2</a>
+        <a href="page3.html">3</a>
+        <a href="page4.html" class="active">4</a>
+        <a href="page5.html">5</a>
+        <a href="page5.html">></a>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <a href="https://www.mangareader.to" 
+    target="_blank" title="goes to mangareader">click me</a>
+    <br>
+    <a href="lyrics.html" target="_blank" title="takes you to lyrics.html">link to lyrics</a>
+    <br>
+    <a href="mailto:myemailwhichdoesntexist@gmail.com" target="_blank" title="email to idk who">email me</a>
+
+    
+    
+    <form action="index.php" method="post" enctype="multipart/form-data">
+        <label for="username">username:</label>
+        <input type="text" id="username" placeholder="one piece" minlength="6" maxlength="15" required>
+        
+        <label for="password">password:</label>
+        <input type="password" id="password"><br>
+
+        <label for="email">email:</label>
+        <input type="email" id="email" placeholder="Ssquarepants@gmail.com"><br>
+        
+        <label for="phone">phone #:</label>
+        <input type="tel" id="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
+
+        <label for="bday">Birthdate</label>
+        <input type="date" id="bday"><br>
+
+        <label for="quantity">quantity</label>
+        <input type="number" id="quantity" min="0" max="99" value="1">
+
+        <label for="Mr.">Mr.</label>
+        <input type="radio" id="Mr." value="Mr.">
+        <label for="Ms.">Ms.</label>
+        <input type="radio" id="Ms." value="Ms.">
+        <label for="PhD.">PhD.</label>
+        <input type="radio" id="PhD." value="PhD."><br>
+            
+        <label for="payment">payment</label>
+        <select id="payment">
+            <option value="visa">visa</option>
+            <option value="mastercard">mastercard</option>
+            <option value="giftcard">giftcard</option>
+        </select><br>
+
+        <label for="subscribe">subscribe</label>
+        <input type="checkbox" id="subscribe"><br>
+
+        <label for="comment">comment</label>
+        <textarea id="comment" rows="3" cols="25">you are cool brocode</textarea>
+
+        <label for="file">file</label>
+        <input type="file" id="file" accept="image/png, image/jpeg"><br>
+
+        <input type="reset"><br>
+        <input type="submit">
+
+    </form>
+    
+    
+    
+    <div class="box" id="box1"><div id="box11"></div></div>
+    <div class="box" id="box2">box2</div>
+    
+    
+    
+    <h1 class="odd" id="h1">this is an H1 heading</h1>
+    <h2 class="even">this is an H2 heading</h2>
+    <h3 class="odd">this is an H3 heading</h3>
+    <h4 class="even">this is an H4 heading</h4>
+    <h5 class="odd">this is an H5 heading</h5>
+    <h6 class="even">this is an H6 heading</h6>
+
+
+    <div id="container">
+        <p>This is #1</p>
+        <p>This is #2</p>
+        <div>
+            <p>This is #3</p>
+        </div>
+    </div>
+
+    <p>This is #4</p>
+    <p>This is #5</p>
+
+    <a id="manga" href="https://mangareader.to" target="_blank">
+        <div>
+        Mangareader
+        <p style="font-size: 22px; color: violet;">
+            Yo, visit this link to read manga
+        </p>
+        </div>
+    </a>
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="container">
+        <div class="box">
+            <h3>This is #1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus debitis dolorum tenetur praesentium quibusdam voluptatibus, labore recusandae porro animi alias explicabo distinctio vero adipisci modi omnis fugiat beatae voluptatem! Atque!</p></div>
+        <div class="box">
+            <h3>This is #2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et a itaque consectetur rerum quod repudiandae dolorum, tenetur ullam? Eum facere nesciunt sapiente veniam asperiores ratione officiis nemo. Eos, nulla iusto.</p></div>
+    </div>
+
+
+
+
+    <p>This is normal text</p>
+    <p>This is <b>bold</b> text</p>
+    <p>This is <i>italic</i> text</p>
+    <p>This is <u>underlined</u> text</p>
+    <p>This is <del>deleted</del> text</p>
+    <p>This is <big>big</big> text</p>
+    <p>This is <small>small</small> text</p>
+    <p>This is <sub>subscript</sub> text</p>
+    <p>This is <sup>superscript</sup> text</p>
+    <p>This is <tt>monospace</tt> text</p>
+    <p>This is <mark style="background-color: lightgreen;">normal</mark> text</p>
+
+
+    <h1><span id="span1" style="background-color: tomato;">This is a span title</span></h1>
+
+    <h1><div id="div1" style="background-color: cyan;">This is a div title</div></h1>
+
+    <p><span id="span2" style="background-color: tomato;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam, officiis blanditiis? Velit repellat iste, doloremque laboriosam dignissimos architecto nemo error quas fugiat,</span> iusto possimus itaque numquam nobis harum, deserunt adipisci.</p>
+
+    <p><div id="div2" style="background-color: cyan; font-size: larger;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officia excepturi praesentium labore nihil corrupti, velit pariatur cupiditate quasi consequuntur veritatis placeat</div> voluptatum numquam esse aperiam perferendis aliquid at. Maxime, nostrum?</p>
+    <div id="div3">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos impedit odit, ipsum, nisi id mollitia libero praesentium est culpa omnis dicta sequi laborum? Quisquam dolorum possimus quas quaerat dolores eum.
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis sequi illum commodi cupiditate corrupti possimus ex ullam voluptates reprehenderit optio culpa repellendus voluptatibus placeat quo, labore accusantium qui nesciunt similique.
+    </div>
+
+    <h4>Groceries</h4>
+    <ul>
+        <li>milk</li>
+        <li>eggs</li>
+        <li>bread</li>
+        <li>coffee supplies</li>
+    </ul>
+    
+    <h4>To-Do List</h4>
+    <ol>
+        <li>eat breakfast</li>
+        <li>go to class</li>
+        <li>walk the dog</li>
+        <li>go to work</li>
+    </ol>
+    
+    <h4>Mythical Devil Fruits in One Piece</h4>
+    <dl style="background-color: aquamarine; border:2px solid black">
+        <dt>Dragon</dt>
+        <dd>Monkey D. Dragon</dd>
+        <dt>Pheonix</dt>
+        <dd>Whitebeard's crew number 2</dd>
+        <dt>Vampire</dt>
+        <dd>someone in blackbeard's crew</dd>
+        <dt>Werewolf</dt>
+        <dd>Yamato</dd>
+    </dl>
+    
+    <h3>Store Hours</h3>
+
+    <table border="1" style="background-color: black;">
+        <tr align="center" style="background-color: lightblue;">
+            <th width="100">Sunday</th>
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thursday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+        </tr>
+        <tr align="center" style="background-color: aliceblue;">
+            <td>Closed</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>9-5</td>
+            <td>10-2</td>
+            
+        </tr>
+    </table>
+    <br>
+    
+
+
+    <button onclick="doSomething()" style="font-size: 25px; background-color: lightgreen; border-radius: 35px;">
+            click me hard
+    </button>
+
+    <p id="greeting">Hello</p>
+    
+    <script>
+        function doSomething(){
+            document.getElementById("greeting").innerHTML= "Goodbye";
+        }
+    </script>
+        
+    
+    <p id="paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+        Qui hic laborum mollitia quibusdam. Odit nemo pariatur
+         tenetur illo reiciendis non amet dolore, corporis aliquid
+          eum hic assumenda repudiandae libero esse?Lorem ipsum dolor sit amet 
+          consectetur adipisicing elit. Sapiente eveniet a optio eos 
+          tempore consequatur saepe nam, maxime distinctio cum numquam,
+           vel quo dolorem dicta excepturi! Porro corrupti aperiam in.
+    </p>
+
+    
+    <pre>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        Reprehenderit, quaerat libero? Re
+        cusandae ipsum necessitatibus officiis harum eligendi 
+        cupiditate tempore hic error fugit. 
+        Explicabo saepe esse earum magni repudiandae 
+        fuga pariatur.
+    </pre>
+
+    </main>
+
+    <footer style="background-color: lightskyblue;">
+        <hr>
+        author: Bro Code<br>
+        &copy; copyright reserved<br>
+        <small><a href="mailto:testmail@email.com">Thisisamailaddress@email.com</a></small>
+        <h3>This is a footer</h3>
+    </footer>
+    <!--This is just a commment-->
+</body>
+</html>

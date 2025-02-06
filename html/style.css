@@ -1,0 +1,451 @@
+@font-face {
+    font-family: playwritei;
+    src: url(fonts/PlaywriteGBS-Italic-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: playwritev;
+    src: url(fonts/PlaywriteGBS-VariableFont_wght.ttf);
+}
+
+body{
+    background-color: rgb(164, 232, 253);
+}
+
+
+#paragraph{
+    background-color: rgb(126, 23, 23);
+    color: rgb(178, 215, 236);    
+}
+
+
+pre{
+    color: rgb(84, 224, 117);
+    background-color: rgb(47, 46, 46);
+}
+
+
+
+h1{
+    font-family: playwritev;
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+p{
+    font-family: playwritei;
+    font-size:1.2em;
+    /* 'em' kinda represents times, like 1em means 100% */
+}
+
+
+h1{
+    border: 3px solid blue;
+    border-radius: 5px;
+}
+
+
+p{
+    border-bottom: 3px solid red;
+    border-top: 3px dashed blue;
+    border-left: 3px dotted green;
+    border-right: 3px groove orange;
+    border-radius: 1px;
+}
+
+
+h1{
+    text-shadow: 3px 3px 5px red,-3px -3px 5px blue;
+}
+
+
+h2{
+    background-color: lightsalmon;
+    box-shadow: 3px 3px 5px red;
+}
+
+
+body{
+    margin:10px
+}
+
+
+#box1{
+    border: 5px dashed red;
+    width: 40px;
+    height: 25px; 
+    margin-right: auto;
+    margin-bottom: 2px; 
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+#box2{
+    border: 5px dashed blue;
+    margin-right: 10px;
+    width: 40px;
+    height: 25px;
+    padding:5px;  
+}
+
+
+/* the float property allows other element to flow around it*/
+#box1{
+    float: right;
+    margin-right: 10px;    
+}
+
+
+body{
+    border: 3px solid white;
+    padding: 5px;
+    /* This property makes the floating elements stay inside the box */
+    display: flow-root;    
+}
+
+
+#div3{
+    border: 5px dotted black;
+    background-color: black;
+    color: rgb(242, 109, 218);
+    height: 200px;
+    font-family: playwritei;
+    font-size: 22px;
+    overflow: auto;
+}
+
+
+#div2{
+    display: inline;
+    width: 100px;
+    height: 100px;
+}
+
+
+#span2{
+    display: block;
+    height: 100px;
+    overflow: auto;
+}
+
+
+.box{
+    border: 3px solid;
+    height: auto;
+    width: auto;
+    padding: 25px;
+    text-align: center;
+}
+
+
+.container{
+    background-color: rgb(209, 235, 251);
+}
+
+
+#box1{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(72, 252, 252);
+    position: relative;
+    top: 0px;
+}
+
+
+#box11{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    top: 50px;
+    left: 50px;
+    background-color: red;
+}
+
+
+body{
+    background-image: url(nightcityskyline.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+
+
+#container{
+    border: 2px solid;
+}
+
+
+/* This is a 'descendent' selector, just an empty space*/
+#container p{
+    background-color: orchid;
+}
+
+
+/* This is a 'child' selector, '>' this symbol */
+#container > p{
+    border: 5px solid rgb(132, 231, 99);
+}
+
+
+/* This is a 'sibling' selector, '~' this symbol 
+para 4 and para 5 are both siblings to div section of #1 and #2
+as these 4 are child of the body tag*/
+#container ~ p{
+    border: 5px solid rgb(255, 50, 50);
+}
+
+
+/* This is an 'adjacent' sibling selector, '+' this symbol
+meaning the sibling right after 
+therefore the #container div will be selected */
+#container + p{
+    border: 5px solid rgb(50, 217, 255);
+}
+
+
+#manga:link{
+    color: rgb(122, 107, 255);
+    font-size: 2em;
+}
+
+
+#manga:hover{
+    color: rgb(116, 182, 240);
+}
+
+
+#manga:active{
+    color: red;
+    font-size: 1.1em;
+}
+
+
+#manga:visited{
+    color: gre;
+}
+
+
+p:hover{
+    background-color: rgb(128, 128, 128, 0.5);
+}
+/*p:not(:hover){
+    background-color: rgb(128, 128, 128, 0.5);
+}*/
+
+
+#groceries{
+    font-size: 30px;
+}
+
+ol{
+    font-size: 30px;
+}
+
+
+/*li:nth-child(2n){
+    background-color: rgb(112, 112, 16);
+}
+we can use 'even','odd', or some formula around 'n' like 2n+1
+inside the round brackets after nth-child to denote which elements to apply the 
+properties to*/
+
+
+#manga div p{
+    background-color:rgb(128, 128, 128, 0.4);
+    padding: 10px;
+    display: none;
+}
+
+
+#manga:hover p{
+    display: block;
+}
+
+
+/* '::' is used to make changes to a specific part of an element
+  selector::pseudo-element */
+h1::first-letter{
+    font-size: 2em;
+    font-style: italic;
+}
+
+p::first-line{
+    background-color: rgb(202, 18, 125);
+}
+
+p::selection{
+    color: black;
+    background-color: aqua;
+}
+
+.edit::before{
+    content: '🫥';
+}
+.edit::after{
+    content: '✓';
+}
+
+#groceries li::marker{
+    content: '⦿';
+}
+
+.pagination{
+    text-align: center;
+}
+.pagination a{
+    color: white;
+    text-decoration: none;
+    padding: 8px 15px;
+    display: inline-block;
+}
+.pagination a.active{
+    background-color: rgb(34, 184, 82);
+    font-weight:bold;
+    border-radius: 5px;
+}
+.pagination a:hover:not(.active){
+    background-color: rgb(128, 128, 128,0.7);
+    border-radius: 5px;
+}
+
+.dropdown button{
+    background-color: aquamarine;
+    color: brown;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+.dropdown a{
+    display: block;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 10px 15px;
+}
+.dropdown .content{
+    display: none;
+    position: absolute;
+    background-color: hsl(0, 0, 95%);
+    min-width: 100px;
+    box-shadow: 2px 2px 5px rgb(245, 222, 179, 80%);
+}
+.dropdown:hover .content{
+    display: block;
+}
+.dropdown:hover button{
+    background-color: hsl(0%, 0%, 70%);
+}
+.dropdown a:hover{
+    background-color: rgb(240, 248, 255, 0.9);
+}
+.dropdown a:not(:hover){
+    background-color: rgb(255, 255, 255, 0.7);
+}
+.dropdown{
+    display: inline-block;
+}
+
+
+.navbar ul{
+    list-style-type: none;
+    background-color: rgb(94, 94, 94);
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+}
+.navbar a{
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+}
+.navbar a:hover{
+    background-color: rgb(43, 43, 43);
+}
+.navbar li{
+    float: left;
+}
+
+
+
+
+.gallery img{
+    height: auto;
+    width: 100%;
+}
+.gallery{
+    display: inline-block;
+    border: 1px solid hsl(0, 0%, 60%);
+    margin: 5px;
+
+}
+.gallery .description{
+    padding: 10px;
+    text-align: center;
+}
+.gallery:hover{
+    border: 1px solid hsl(0, 0%, 30%);
+}
+
+
+
+
+.icons{
+    text-align: center;
+}
+.fa-solid.fa-house.fa-5x{
+    color: hsl(0, 0%, 80%);
+}
+.fa-brands.fa-square-x-twitter.fa-6x{
+    color: hsl(0, 0%, 28%);
+}
+.fa-brands.fa-square-github.fa-6x{
+    color: purple;
+}
+.fa-brands.fa-youtube.fa-5x{
+    color: hsl(0, 100%, 30%);
+}
+.icons a{
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.fa-solid.fa-house.fa-5x:hover{
+    color: hsl(0, 0%, 100%);
+}
+.fa-brands.fa-square-x-twitter.fa-6x:hover{
+    color: hsl(0, 0%, 56%);
+}
+.fa-brands.fa-square-github.fa-6x:hover{
+    color: hsl(300, 100%, 50%);
+}
+.fa-brands.fa-youtube.fa-5x:hover{
+    color: hsl(0, 100%, 50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
