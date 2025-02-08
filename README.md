@@ -1,1 +1,1 @@
-# codes
+this is a repo dedicated to learning.

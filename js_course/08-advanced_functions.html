@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>advanced functions</title>
+</head>
+<body>
+  <script>
+    greeting(); // this is called hoisting as the function is called before it is declared // hoisting doesn't work when we create a function and then create a variable like this
+    function greeting() {
+      console.log("orewaa");
+    };
+    // this function is actually a shortcut for the code below:
+    // var greeting = function() {
+    //   console.log("orewaa");
+    // };
+    greeting();
+
+    const num = 2;
+    const function1 = function() { // this "function()" is called an anonymous function i.e, a function without a name
+      console.log("luffyyyy");
+    };
+    console.log(function1);
+    console.log(typeof function1);
+    function1();
+
+    
+  </script>
+</body>
+</html>
