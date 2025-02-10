@@ -9,11 +9,24 @@
   <script>
 
     console.log(Date.now())
-    for (let i = 0; i < 100000; i++) {
+    for (let i = 0; i < 1000000; i++) {
 
     }
     const present = Date.now()
     console.log(present)
+
+    const intervalId = setInterval(() => {
+      console.log("call")
+    }, 1000);
+
+    
+    const timeoutId = setTimeout(() => {
+      clearInterval(intervalId)
+    },10001)
+
+    setTimeout(() => {
+      clearTimeout(timeoutId)
+    },10002)
 
 
 
