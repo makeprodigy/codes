@@ -8,29 +8,56 @@
 <body>
   <script>
 
-    console.log(Date.now())
-    for (let i = 0; i < 1000000; i++) {
+    // console.log(Date.now())
+    // for (let i = 0; i < 1000000; i++) {
 
-    }
-    const present = Date.now()
-    console.log(present)
+    // }
+    // const present = Date.now()
+    // console.log(present)
 
-    const intervalId = setInterval(() => {
-      console.log("call")
-    }, 1000);
+    // const intervalId = setInterval(() => {
+    //   console.log("call")
+    // }, 1000);
 
     
-    const timeoutId = setTimeout(() => {
-      clearInterval(intervalId)
-    },10001)
+    // const timeoutId = setTimeout(() => {
+    //   clearInterval(intervalId)
+    // },10001)
 
-    setTimeout(() => {
-      clearTimeout(timeoutId)
-    },10002)
+    // setTimeout(() => {
+    //   clearTimeout(timeoutId)
+    // },10002)
+    // import { Temporal } from "@js-temporal/polyfill";
+    // const nowDateTimee = Temporal.Now.plainDateTimeISO();
+    // console.log(nowDateTimee.toString()); // e.g., "2025-02-11T14:45:12.3456789"
 
+    const promise = new Promise((res, rej) => {
+      setTimeout(() => {
+        res("hello, world")
+      }, 1000)
+    })
+    console.log(promise);
+
+    // then and catch
+    promise.then((data) => {
+      console.log('fulfilled')
+      console.log(data)
+    }).catch((data) => {
+      console.log('error')
+      console.log(data)
+    }).finally((data) => {
+      console.log('finally')
+      console.log(data)
+    })
 
 
 
   </script>
+  <!-- <script type="module">
+    import { Temporal } from "<Desktop>@js-temporal/polyfill";
+
+    const nowDateTime = Temporal.Now.plainDateTimeISO();
+    console.log(nowDateTime.toString()); // Example output: "2025-02-11T14:45:12.3456789" -->
+</script>
 </body>
 </html>
