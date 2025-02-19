@@ -2,7 +2,7 @@ import sys
  
 def main():
     inp = sys.stdin.read
-    d = input().split()
+    d = inp().split()
     i = 0
     
     t = int(d[i])
