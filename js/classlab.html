@@ -6,7 +6,7 @@
   <title>Class Lab</title>
 </head>
 <body>
-  <script>
+  <!-- <script>
 
     // console.log(Date.now())
     // for (let i = 0; i < 1000000; i++) {
@@ -53,11 +53,60 @@
 
 
   </script>
-  <!-- <script type="module">
+   <script type="module">
     import { Temporal } from "<Desktop>@js-temporal/polyfill";
 
     const nowDateTime = Temporal.Now.plainDateTimeISO();
     console.log(nowDateTime.toString()); // Example output: "2025-02-11T14:45:12.3456789" -->
-</script>
+<!-- </script> -->
+  <script>
+    // fetch('https://dummyjson.com/users')
+    //   .then((res) => {
+    //     return res.json()
+    //   })
+    //   .then((data) => {
+    //     console.log(data)
+    //   })
+
+
+    function displayTime() {
+      const now = new Date();
+      const Time = now.toLocaleTimeString()
+
+      console.log(Time);
+    }
+    
+    // setInterval(displayTime, 1000)
+
+    function startCountdown(seconds) {
+      let countdownTimeout;
+
+      function countdown() {
+        if (seconds > 0) {
+          console.log(seconds);
+          seconds--;
+          countdownTimeout = setTimeout(countdown,1000);
+        } else {
+          console.log("Time's up")
+        }
+      }
+
+      countdown();
+
+      setTimeout(() => {
+        clearTimeout(countdownTimeout);
+        console.log("Countdown Stopped!")
+      }, 1000*(seconds+1));
+    }
+
+    startCountdown(5);
+
+    
+
+
+
+  </script>
+
+
 </body>
 </html>
