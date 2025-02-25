@@ -99,7 +99,82 @@
       }, 1000*(seconds+1));
     }
 
-    startCountdown(5);
+    // startCountdown(5);
+
+    // fetch('https://mocki.io/v1/53c88eea-fcf9-40f9-aa37-ba0b2c32dbf6', {
+    // method: 'GET'
+    // })
+    // .then(response => {
+    // if (!response.ok) {
+    //     throw new Error(`HTTP error! Status: ${response.status}`);
+    // }
+    // return response.json();  // Parse JSON properly
+    // })
+    // .then(data => console.log(data))
+    // .catch(err => console.error("Error:", err));
+
+    const responsePromise = fetch("https://mocki.io/v1/48ae5215-d6bc-4edc-81f7-99245bf9c0e5",
+    {
+    method: "GET",
+    body: JSON.stringify({name: "mouli"})
+    })
+    responsePromise.then((response)=>{
+    console.log(response.json()) //readable stream or buffer  (response.ok : true or false)
+    const dataPromise = response.json();
+    dataPromise.then((data)=>{
+        console.log(data)
+    })
+    }).catch((err)=>{
+    //only network failures
+    // console.log("Inside catch")
+    })
+
+
+    fetch(url)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error
+      }
+      return response.json()
+    })
+    .then(data => {
+      console.log('Fetched posts', data);
+    })
+    .catch(error => {
+      console.log('Error occured:', error);
+      const fallbackData = [{ id:1, title: 'Falback post'}];
+      console.log('Using fallback data:', fallbackData);
+    });
+
+
+    function fetchWithRetry(url, retries = 3) {
+      return fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('Network error');
+          }
+        })
+        .catch(error => {
+          if (retries > 0) {
+            console.log(`Retrying... Attempts left: ${retries}`);
+            return fetchWithRetry(url, retries - 1);
+          } else {
+            console.error('Max retries reached');
+            throw error;
+          }
+        });
+    }
+    fetchWithRetry(url);
+
+    fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        // process data
+      })
+      .catch(error => {
+        console.error('Showing limited content');
+        displayMinimalContent();
+      })
 
     
 
